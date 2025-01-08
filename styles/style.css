@@ -144,6 +144,7 @@ nav p{
     text-align: center;
     letter-spacing: 0.4em;
     margin-top: 55px;
+    cursor: default;
 }
 .hero a{
     display: flex;
@@ -160,9 +161,11 @@ nav p{
     background-color: var(--black);
     border-radius: 5px;
     margin:30px auto;
+    transition: all 1s;
 }
 .hero a:hover{
     text-decoration: none;
+    width: 40%;
 }
  @media only screen and (min-width: 600px) {
     /* For tablets: */
@@ -203,6 +206,11 @@ nav p{
     .hero h2{
         letter-spacing: 1em;
         margin: 0;
+    }
+    .hero a:hover{
+        color: var(--lightPurple);
+  box-shadow: 0 0 10px var(--lightPurple);
+  text-shadow: 0 0 5px var(--lightPurple);
     }
     
   }
