@@ -173,7 +173,7 @@ nav p {
   padding: 20px;
 }
 #what-to-expect {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   border-left: 3px solid var(--black);
   text-transform: uppercase;
   padding-left: 10px;
@@ -187,7 +187,7 @@ nav p {
 }
 
 .card{
-    padding: 20px;
+    padding: 30px;
     display:  flex;
 
     flex-direction: row;
@@ -196,8 +196,12 @@ nav p {
      justify-content: center;
 }
 .card .card_icon{
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--lightPurple);
+
+}
+.card h3{
+  font-size: 1.4em;
 
 }
 /* ==============END OF SECTION 1 STYLES ============= */
