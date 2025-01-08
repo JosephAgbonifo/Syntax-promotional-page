@@ -183,32 +183,46 @@ nav p {
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  gap: 40px;
+  width: 70%;
+  margin: auto;
 }
 
 .card{
     padding: 30px;
     display:  flex;
-
+    background-color: var(--gray);
     flex-direction: row;
-     align-items: flex-start;
-     gap: 20px;
-     justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: center;
+    height: 30vh;
 }
 .card .card_icon{
     font-size: 2rem;
-    color: var(--lightPurple);
+    color: var(--purple);
 
 }
 .card h3{
   font-size: 1.4em;
 
 }
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+.fade-in.appear{
+  opacity: 1;
+}
 /* ==============END OF SECTION 1 STYLES ============= */
 @media only screen and (min-width: 600px) {
   /* For tablets: */
   .m-only {
     display: none;
+  }
+  .card{
+    height: 40vh;
   }
 
   
@@ -254,5 +268,8 @@ nav p {
     color: var(--lightPurple);
     box-shadow: 0 0 10px var(--lightPurple);
     text-shadow: 0 0 5px var(--lightPurple);
+  }
+  .card{
+    height: 50vh;
   }
 }
