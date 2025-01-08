@@ -9,6 +9,9 @@
     --green: #095F45;
 }
 /* General body settings */
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: lato, sans-serif; 
     font-size: 16px;                  
