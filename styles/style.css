@@ -216,6 +216,172 @@ nav p {
   opacity: 1;
 }
 /* ==============END OF SECTION 1 STYLES ============= */
+
+/* =========== WAITLIST FORM STYLES STARTS =========== */
+/* Waitlist Container */
+.waitlist-container {
+  text-align: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+}
+
+.waitlist-container h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.waitlist-container p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.waitlist-form input[type="email"] {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.waitlist-form input[type="email"]:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.waitlist-form button {
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.waitlist-form button:hover {
+  background-color: #0056b3;
+}
+/* ============ WAITLIST FORM STYLES END ============ */
+
+/* ========== FOOTER STYLES STARTS ==============*/
+footer {
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 30px 15px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: center;
+}
+
+/* Social Media Section */
+.social-media h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007BFF;
+}
+
+/* Contact Section */
+.contact h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.contact p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+/* Newsletter Section */
+.newsletter h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* ============ FOOTER STYLES ENDS ==============*/
+
 @media only screen and (min-width: 600px) {
   /* For tablets: */
   .m-only {
