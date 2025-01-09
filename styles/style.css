@@ -1,3 +1,4 @@
+
 /* General styles*/
 :root {
   --textColor: #262626;
@@ -19,6 +20,11 @@ nav {
   align-items: center;
   z-index: 1;
 }
+.nav-bg{
+  background-color: var(--white);
+  padding-bottom: 10px;
+  box-shadow: 0px 1px 1px var(--purple);
+}
 .menu-content .closebtn {
   position: absolute;
   top: -35px;
@@ -35,6 +41,7 @@ nav img {
 nav span {
   font-size: 2.5em;
   font-family: pixelifysans;
+  padding-left: 1em;
 }
 nav p {
   font-size: 1.5em;
@@ -172,7 +179,7 @@ nav p {
   margin-top: 20px;
   padding: 20px;
 }
-#what-to-expect {
+.what-to-expect {
   font-size: 1.3rem;
   border-left: 3px solid var(--black);
   text-transform: uppercase;
@@ -196,7 +203,7 @@ nav p {
     align-items: flex-start;
     gap: 20px;
     justify-content: center;
-    height: 30vh;
+    height: 50vh;
 }
 .card .card_icon{
     font-size: 2rem;
@@ -215,100 +222,110 @@ nav p {
 .fade-in.appear{
   opacity: 1;
 }
+.bottom-up{
+  transform: translateY(50%);
+  opacity: 0;
+  background-color: var(--white);
+  transition: transform 450ms ease-in;
+}
+.bottom-up.appear{
+  transform: translateY(0%);
+  opacity: 1;
+}
 /* ==============END OF SECTION 1 STYLES ============= */
 
 /* =========== WAITLIST FORM STYLES STARTS =========== */
 /* Waitlist Container */
-.waitlist-container {
-  text-align: center;
-  background: #fff;
-  padding: 30px;
+.waitlist{
+    margin-top: 20px;
+  padding: 20px;
+}
+.waitlist-form-container{
+  width: 50%;
+  max-width:500px;
+  background-color: var(--gray);
+  margin: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 90%;
+  height: 300px;
+  padding: 40px;
 }
-
-.waitlist-container h1 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
+.waitlist h5{
+  color: var(--black);
+  padding-left: 30px;
+  margin: auto;
+  margin-top: 30px;
+  max-width: 600px;
 }
-
-.waitlist-container p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
 /* Form Styling */
-.waitlist-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.waitlist-form{
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  max-width: 600px;
 }
-
+.waitlist-form label{
+  padding-right: 20px;
+}
 .waitlist-form input[type="email"] {
-  padding: 12px;
+  padding: 5px;
+  background-color: transparent;
   font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: none;
+  border-bottom:2px solid var(--black);
   outline: none;
+  width: 60%;
   transition: all 0.3s ease-in-out;
 }
 
 .waitlist-form input[type="email"]:focus {
-  border-color: #007BFF;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  border-color: var(--purple);
+  width:70%;
 }
 
 .waitlist-form button {
-  padding: 12px;
+  padding: 5px;
   font-size: 16px;
-  color: #fff;
-  background-color: #007BFF;
-  border: none;
+  color: var(--lightPurple);
+  background-color: transparent;
+  border: 2px solid var(--lightPurple);
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  margin-top: 20px;
 }
 
 .waitlist-form button:hover {
-  background-color: #0056b3;
+  background-color:var(--purple);
+  color: var(--white);
+  border: none;
 }
 /* ============ WAITLIST FORM STYLES END ============ */
 
 /* ========== FOOTER STYLES STARTS ==============*/
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--black);
+  color: var(--gray);
   font-family: Arial, sans-serif;
   padding: 30px 15px;
 }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  text-align: center;
-}
 
 /* Social Media Section */
 .social-media h3 {
   margin-bottom: 15px;
   font-size: 20px;
+  text-align: center;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 30px;
 }
 
 .social-icons a {
   text-decoration: none;
-  font-size: 24px;
+  font-size: 1em;
   color: #fff;
   transition: color 0.3s;
 }
@@ -321,17 +338,21 @@ footer {
 .contact h3 {
   margin-bottom: 15px;
   font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .contact p {
   margin: 5px 0;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* Newsletter Section */
 .newsletter h3 {
   margin-bottom: 15px;
   font-size: 20px;
+  text-align: center;
 }
 
 .newsletter-form {
@@ -350,7 +371,7 @@ footer {
 }
 
 .newsletter-form button {
-  padding: 10px 15px;
+  padding: 5px 10px;
   font-size: 14px;
   background-color: #007BFF;
   color: #fff;
@@ -363,7 +384,9 @@ footer {
 .newsletter-form button:hover {
   background-color: #0056b3;
 }
-
+.social-media, .newsletter, .contact{
+  padding-bottom: 30px;
+}
 /* Footer Bottom */
 .footer-bottom {
   text-align: center;
@@ -437,5 +460,16 @@ footer {
   }
   .card{
     height: 50vh;
+  }
+  footer hr{
+    outline:  none;
+    border: none;
+    width: 25px;
+    border-top-style: dotted;
+    border-top-width: 6px;
+    border-top-color: var(--lightPurple);
+  }
+  .footer-bottom {
+    border: none;
   }
 }

@@ -64,15 +64,12 @@
   </head>
   <body>
     <!-- NAVBAR & MENU -->
-    <nav>
-      <img src="images/Syntax_logo_nobg.png" alt="syntax logo" />
+    <nav id="nav">
       <span>SYNTAX</span
-      ><sub class="d-only nav-tagline"
-        >...the best way to learn tech skills</sub
       >
       <div class="d-only d-menu">
         <a href="#waitlist">Join Waitlist</a>
-        <a href="#footer">Contact US</a>
+        <a href="#contact">Contact US</a>
       </div>
       <div class="menu-icon" onclick="openNav()">
         <i class="fa-solid fa-bars"></i>
@@ -99,7 +96,7 @@
 
     <!-- SECTION 1 -->
     <section id="what-to-expect-section">
-      <h2  id="what-to-expect">what to expect</h2>
+      <h2  class="what-to-expect">what to expect</h2>
       <div class="cards-container ">
         <div class="card fade-in">
           <div class="card_icon">
@@ -178,21 +175,29 @@
     </section>
 
     <!-- WAITLIST FORM -->
-    <div class="waitlist-form">
-      <h1>JOIN THE WAITLIST</h1>
-      <p>Sign up to stay updated. Enter your email below:</p>
-      <form class="waitlist-form">
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Join Now</button>
+    <div id="waitlist" class="waitlist bottom-up">
+      <h2  class="what-to-expect">be the first to see what we're up to</h2>
+        <h5>Join the waitlist</h5>
+        <form class="waitlist-form text-center">
+          <label for="email"><i class="fa-regular fa-envelope"></i></label>
+        <input type="email" id="email" name="email" required /><br />
+        <div class="row">
+          <div class="col">
+
+          </div>
+          <div class="col">
+            <button type="submit">Join Now</button>
+          </div>
+        </div>
       </form>
     </div>
     <!-- SECTION 2 -->
 
     <!-- FOOTER -->
-    <footer>
-      <div class="footer-container">
+    <footer id="contact">
+      <div class="row">
         <!-- Social Media Section -->
-        <div class="footer-section social-media">
+        <div class="col-lg social-media">
           <h3>Connect with Us</h3>
           <div class="social-icons">
             <a href="#"><i class="fab fa-facebook"></i></a>
@@ -205,7 +210,7 @@
         </div>
     
         <!-- Contact Section -->
-        <div class="footer-section contact">
+        <div class="col-lg contact">
           <h3>Contact Us</h3>
           <p>24 Syntax Street, Suite 100<br>Springfield, Ikoyi, Lagos Nigeria</p>
           <p>Email: contact@syntax.com</p>
@@ -213,8 +218,8 @@
         </div>
     
         <!-- Newsletter Section -->
-        <div class="footer-section newsletter">
-          <h3>Newsletter Form</h3>
+        <div class="col-lg newsletter">
+          <h3>Subscribe To Newsletter</h3>
           <form class="newsletter-form">
             <input type="email" placeholder="Enter your email" required>
             <button type="submit">Subscribe</button>
@@ -222,6 +227,7 @@
         </div>
       </div>
       <div class="footer-bottom">
+        <hr class="d-only"/>
         <p>&copy; SYNTAX 2025</p>
       </div>
     </footer>

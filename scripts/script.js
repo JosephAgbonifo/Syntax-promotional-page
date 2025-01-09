@@ -1,4 +1,6 @@
 /* Close when someone clicks on the "x" symbol inside the overlay */
+window.addEventListener("scroll", setScollVar)
+window.addEventListener("resize", setScollVar);
 function closeNav() {
     document.getElementsByClassName("control-me")[0].style.width = "0%";
     document.getElementsByClassName("menu-icon")[0].style.display = "block";
@@ -9,6 +11,7 @@ function closeNav() {
   }
 
 const faders = document.querySelectorAll(".fade-in");
+const sliders= document.querySelectorAll(".bottom-up");
 const options = {
   threshold: 1,
   rootMargin: "0px 0px 0px 0px"
@@ -29,3 +32,17 @@ const appearOnScroll = new  IntersectionObserver( function(entries,appearOnScrol
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
 })
+sliders.forEach(sliders => {
+  appearOnScroll.observe(sliders);
+})
+
+function setScollVar(){
+  const htmlElement = document.documentElement ;
+  const percentScrolled = htmlElement.scrollTop / htmlElement.clientHeight;
+  var headerProperty = Math.min(percentScrolled * 100, 100)
+  if(headerProperty<100){
+    document.getElementById("nav").classList.remove("nav-bg");
+  } else {
+    document.getElementById("nav").classList.add("nav-bg");
+  }
+}
