@@ -192,7 +192,7 @@ nav p {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
   width: 70%;
-  margin: auto;
+  margin-left: calc(15% - 10px);
 }
 
 .card{
@@ -203,7 +203,7 @@ nav p {
     align-items: flex-start;
     gap: 20px;
     justify-content: center;
-    height: 50vh;
+    height: auto;
 }
 .card .card_icon{
     font-size: 2rem;
