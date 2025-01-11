@@ -1,4 +1,3 @@
-
 /* General styles*/
 :root {
   --textColor: #262626;
@@ -20,7 +19,7 @@ nav {
   align-items: center;
   z-index: 1;
 }
-.nav-bg{
+.nav-bg {
   background-color: var(--white);
   padding-bottom: 10px;
   box-shadow: 0px 1px 1px var(--purple);
@@ -195,40 +194,38 @@ nav p {
   margin-left: calc(15% - 10px);
 }
 
-.card{
-    padding: 30px;
-    display:  flex;
-    background-color: var(--gray);
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 20px;
-    justify-content: center;
-    height: auto;
+.card {
+  padding: 30px;
+  display: flex;
+  background-color: var(--gray);
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: center;
+  height: auto;
 }
-.card .card_icon{
-    font-size: 2rem;
-    color: var(--purple);
-
+.card .card_icon {
+  font-size: 2rem;
+  color: var(--purple);
 }
-.card h3{
+.card h3 {
   font-size: 1.4em;
-
 }
 
 .fade-in {
   opacity: 0;
   transition: opacity 250ms ease-in;
 }
-.fade-in.appear{
+.fade-in.appear {
   opacity: 1;
 }
-.bottom-up{
+.bottom-up {
   transform: translateY(50%);
   opacity: 0;
   background-color: var(--white);
   transition: transform 450ms ease-in;
 }
-.bottom-up.appear{
+.bottom-up.appear {
   transform: translateY(0%);
   opacity: 1;
 }
@@ -236,20 +233,21 @@ nav p {
 
 /* =========== WAITLIST FORM STYLES STARTS =========== */
 /* Waitlist Container */
-.waitlist{
-    margin-top: 20px;
+.waitlist,
+.team {
+  margin-top: 20px;
   padding: 20px;
 }
-.waitlist-form-container{
+.waitlist-form-container {
   width: 50%;
-  max-width:500px;
+  max-width: 500px;
   background-color: var(--gray);
   margin: auto;
   border-radius: 10px;
   height: 300px;
   padding: 40px;
 }
-.waitlist h5{
+.waitlist h5 {
   color: var(--black);
   padding-left: 30px;
   margin: auto;
@@ -257,32 +255,40 @@ nav p {
   max-width: 600px;
 }
 /* Form Styling */
-.waitlist-form{
+.waitlist-form,
+.team form {
   display: block;
   margin: auto;
   margin-top: 30px;
   max-width: 600px;
 }
-.waitlist-form label{
+.team {
+  text-align: center;
+}
+.waitlist-form label,
+.team form label {
   padding-right: 20px;
 }
-.waitlist-form input[type="email"] {
+.waitlist-form input[type="email"],
+.team form input {
   padding: 5px;
   background-color: transparent;
   font-size: 16px;
   border: none;
-  border-bottom:2px solid var(--black);
+  border-bottom: 2px solid var(--black);
   outline: none;
   width: 60%;
   transition: all 0.3s ease-in-out;
 }
 
-.waitlist-form input[type="email"]:focus {
+.waitlist-form input[type="email"]:focus,
+.team form input:focus {
   border-color: var(--purple);
-  width:70%;
+  width: 70%;
 }
 
-.waitlist-form button {
+.waitlist-form button,
+.team form button {
   padding: 5px;
   font-size: 16px;
   color: var(--lightPurple);
@@ -294,8 +300,9 @@ nav p {
   margin-top: 20px;
 }
 
-.waitlist-form button:hover {
-  background-color:var(--purple);
+.waitlist-form button:hover,
+.team form button:hover {
+  background-color: var(--purple);
   color: var(--white);
   border: none;
 }
@@ -308,7 +315,6 @@ footer {
   font-family: Arial, sans-serif;
   padding: 30px 15px;
 }
-
 
 /* Social Media Section */
 .social-media h3 {
@@ -331,7 +337,7 @@ footer {
 }
 
 .social-icons a:hover {
-  color: #007BFF;
+  color: #007bff;
 }
 
 /* Contact Section */
@@ -373,7 +379,7 @@ footer {
 .newsletter-form button {
   padding: 5px 10px;
   font-size: 14px;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -384,7 +390,9 @@ footer {
 .newsletter-form button:hover {
   background-color: #0056b3;
 }
-.social-media, .newsletter, .contact{
+.social-media,
+.newsletter,
+.contact {
   padding-bottom: 30px;
 }
 /* Footer Bottom */
@@ -410,11 +418,9 @@ footer {
   .m-only {
     display: none;
   }
-  .card{
+  .card {
     height: 40vh;
   }
-
-  
 }
 
 @media only screen and (min-width: 768px) {
@@ -458,11 +464,11 @@ footer {
     box-shadow: 0 0 10px var(--lightPurple);
     text-shadow: 0 0 5px var(--lightPurple);
   }
-  .card{
+  .card {
     height: 50vh;
   }
-  footer hr{
-    outline:  none;
+  footer hr {
+    outline: none;
     border: none;
     width: 25px;
     border-top-style: dotted;
