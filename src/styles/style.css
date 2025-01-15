@@ -1,0 +1,481 @@
+/* General styles*/
+:root {
+  --textColor: #262626;
+  --gray: #a6a6a6;
+  --lightPurple: #755c9b;
+  --purple: #7030a0;
+  --white: #f2f2f2;
+  --black: #1b192e;
+  --green: #095f45;
+  --scroll: 0;
+}
+/* For mobile phones: */
+
+/* navbar */
+nav {
+  box-shadow: 0px 2px 3px black;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  z-index: 1;
+}
+.nav-bg {
+  background-color: var(--white);
+  padding-bottom: 10px;
+  box-shadow: 0px 1px 1px var(--purple);
+}
+.menu-content .closebtn {
+  position: absolute;
+  top: -35px;
+  right: 45px;
+  font-size: 60px;
+}
+.menu-content .closebtn:hover {
+  text-decoration: none;
+}
+nav img {
+  width: 100px;
+  margin-left: -20px;
+}
+nav span {
+  font-size: 2.5em;
+  font-family: pixelifysans;
+  padding-left: 1em;
+}
+nav p {
+  font-size: 1.5em;
+  font-family: pixelifysans;
+  margin-left: 20px;
+}
+.menu-icon {
+  margin-left: auto;
+  margin-right: 20px;
+  font-size: 2em;
+}
+.w-btn {
+  margin-left: auto;
+  margin-right: 20px;
+  font-size: 1.2em;
+  border: 2px solid var(--green);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 1s;
+}
+.w-btn a {
+  font-weight: 700;
+  color: var(--green);
+}
+.w-btn a:hover {
+  text-decoration: none;
+}
+
+.control-me {
+  width: 0%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 1s;
+  background-color: var(--gray);
+  z-index: 99;
+}
+.visually-hidden {
+  position: absolute;
+  left: -100vw;
+}
+.menu-content {
+  overflow: hidden;
+  position: relative;
+  top: 5%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+.menu-content span {
+  font-size: 1.3em;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: montserrat;
+  border-radius: 5px;
+  cursor: default;
+  width: 80%;
+  margin: auto;
+  height: 40px;
+  margin-top: 20px;
+  transition: all 0.5s;
+  font-weight: 500;
+}
+.menu-content span:hover {
+  background-color: var(--lightPurple);
+}
+.d-only {
+  display: none;
+}
+.d-menu {
+  margin-left: auto;
+  margin-right: 10px;
+}
+.d-menu a {
+  color: var(--green);
+  background-color: var(--white);
+  border: 2px solid var(--green);
+  border-radius: 5px;
+  margin-right: 20px;
+  height: 40px;
+  padding: 10px;
+}
+.d-menu a:hover {
+  color: var(--green);
+  text-decoration: none;
+}
+.nav-tagline {
+  margin-bottom: -30px;
+  font-style: italic;
+}
+/* hero section */
+.hero {
+  background-image: url(../images/texture.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+  border-radius: 0 0 30px 30px;
+  padding-top: 70px;
+}
+.hero h2 {
+  text-align: center;
+  letter-spacing: 0.4em;
+  margin-top: 55px;
+  cursor: default;
+}
+.hero a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.1em;
+  cursor: default;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  height: 50px;
+  background-color: var(--black);
+  border-radius: 5px;
+  margin: 30px auto;
+  transition: all 1s;
+}
+.hero a:hover {
+  text-decoration: none;
+  width: 40%;
+}
+
+/* ==============SECTION 1 STYLES ============= */
+#what-to-expect-section {
+  margin-top: 20px;
+  padding: 20px;
+}
+.what-to-expect {
+  font-size: 1.3rem;
+  border-left: 3px solid var(--black);
+  text-transform: uppercase;
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  width: 70%;
+  margin-left: calc(15% - 10px);
+}
+
+.card {
+  padding: 30px;
+  display: flex;
+  background-color: var(--gray);
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  justify-content: center;
+  height: auto;
+}
+.card .card_icon {
+  font-size: 2rem;
+  color: var(--purple);
+}
+.card h3 {
+  font-size: 1.4em;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+.fade-in.appear {
+  opacity: 1;
+}
+.bottom-up {
+  transform: translateY(50%);
+  opacity: 0;
+  background-color: var(--white);
+  transition: transform 450ms ease-in;
+}
+.bottom-up.appear {
+  transform: translateY(0%);
+  opacity: 1;
+}
+/* ==============END OF SECTION 1 STYLES ============= */
+
+/* =========== WAITLIST FORM STYLES STARTS =========== */
+/* Waitlist Container */
+.waitlist,
+.team {
+  margin-top: 20px;
+  padding: 20px;
+}
+.waitlist-form-container {
+  width: 50%;
+  max-width: 500px;
+  background-color: var(--gray);
+  margin: auto;
+  border-radius: 10px;
+  height: 300px;
+  padding: 40px;
+}
+.waitlist h5 {
+  color: var(--black);
+  padding-left: 30px;
+  margin: auto;
+  margin-top: 30px;
+  max-width: 600px;
+}
+/* Form Styling */
+.waitlist-form,
+.team form {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  max-width: 600px;
+}
+.team {
+  text-align: center;
+}
+.waitlist-form label,
+.team form label {
+  padding-right: 20px;
+}
+.waitlist-form input[type="email"],
+.team form input {
+  padding: 5px;
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid var(--black);
+  outline: none;
+  width: 60%;
+  transition: all 0.3s ease-in-out;
+}
+
+.waitlist-form input[type="email"]:focus,
+.team form input:focus {
+  border-color: var(--purple);
+  width: 70%;
+}
+
+.waitlist-form button,
+.team form button {
+  padding: 5px;
+  font-size: 16px;
+  color: var(--lightPurple);
+  background-color: transparent;
+  border: 2px solid var(--lightPurple);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  margin-top: 20px;
+}
+
+.waitlist-form button:hover,
+.team form button:hover {
+  background-color: var(--purple);
+  color: var(--white);
+  border: none;
+}
+/* ============ WAITLIST FORM STYLES END ============ */
+
+/* ========== FOOTER STYLES STARTS ==============*/
+footer {
+  background-color: var(--black);
+  color: var(--gray);
+  font-family: Arial, sans-serif;
+  padding: 30px 15px;
+}
+
+/* Social Media Section */
+.social-media h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 1em;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+/* Contact Section */
+.contact h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact p {
+  margin: 5px 0;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Newsletter Section */
+.newsletter h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #0056b3;
+}
+.social-media,
+.newsletter,
+.contact {
+  padding-bottom: 30px;
+}
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* ============ FOOTER STYLES ENDS ==============*/
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .m-only {
+    display: none;
+  }
+  .card {
+    height: 40vh;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .menu-icon,
+  .w-btn,
+  .control-me,
+  .m-only {
+    display: none;
+  }
+  .m-only {
+    display: none;
+  }
+  .d-only {
+    display: block;
+  }
+  nav {
+    box-shadow: 0px 0px 0px black;
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    align-items: center;
+  }
+  .hero {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero h2 {
+    letter-spacing: 1em;
+    margin: 0;
+  }
+  .hero a:hover {
+    color: var(--lightPurple);
+    box-shadow: 0 0 10px var(--lightPurple);
+    text-shadow: 0 0 5px var(--lightPurple);
+  }
+  .card {
+    height: 50vh;
+  }
+  footer hr {
+    outline: none;
+    border: none;
+    width: 25px;
+    border-top-style: dotted;
+    border-top-width: 6px;
+    border-top-color: var(--lightPurple);
+  }
+  .footer-bottom {
+    border: none;
+  }
+}
