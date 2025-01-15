@@ -186,7 +186,7 @@
 
           </div>
           <div class="col">
-            <button type="submit">Join Now</button>
+            <button type="submit" id="waitlistaction">Join Now</button>
           </div>
         </div>
       </form>
@@ -202,15 +202,15 @@
         <label for="role"> Role </label>
         <input type="text" name="role" id="role" /><br />
         <label for="email"> Email </label>
-        <input type="email" name="email" id="email" /><br />
+        <input type="email" name="email" id="emaila" /><br />
         <label for="phone"> Phone Number </label>
-        <input type="text" name="role" id="role" /></br>
+        <input type="text" name="phone" id="phone" /></br>
         <div class="row">
           <div class="col">
 
           </div>
           <div class="col">
-            <button type="submit">Join Team</button>
+            <button id="team">Join Team</button>
           </div>
         </div>
         </form>
@@ -256,5 +256,96 @@
     
 
     <script src="scripts/script.js"></script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+      import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+    
+      const firebaseConfig = {
+        apiKey: "AIzaSyB3Y6L7iRkEcMY5o2g4-W8kx1HlNx7bJ48",
+        authDomain: "synthera-64205.firebaseapp.com",
+        projectId: "synthera-64205",
+        storageBucket: "synthera-64205.firebasestorage.app",
+        messagingSenderId: "321640433437",
+        appId: "1:321640433437:web:50a10f0983deb43d5283f4",
+        measurementId: "G-6WKT1DZGDF"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase(app);
+    
+      // Function to encode email for Firebase path
+      function encodeEmail(email) {
+        return email.replace(/\./g, ','); // Replace '.' with ','
+      }
+    
+      
+      async function handleWaitlistSubmit(event) {
+        event.preventDefault();
+        const button = document.getElementById("waitlistaction");
+        try {
+          const email = document.getElementById("email").value;
+          const encodedEmail = encodeEmail(email);
+          
+          button.disabled = true;
+          button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Joining...';
+
+          set(ref(db, 'waitlist/' + encodedEmail), {
+              email: email // Store the original email
+            }).then(() => {
+              alert(`Email ${email} added to the waitlist!`);
+              button.disabled = false;
+              button.innerHTML = "Join Now";
+              document.getElementById("email").value = "";
+            }).catch((error) => {
+              console.error('Error writing to Firebase:', error);
+          });
+        } catch (error) {
+          console.error("Error adding to waitlist:", error);
+          alert("Something went wrong. Please try again.");
+        } 
+      }
+
+    // Attach event listener to the waitlist form
+    document.querySelector(".waitlist-form").addEventListener("submit", handleWaitlistSubmit);
+
+    // Function to handle the team form submission
+    async function handleTeamSubmit(event) {
+      event.preventDefault();
+      const button = document.getElementById("team");
+      button.disabled = true;
+      button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Joining...';
+
+      try {
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData.entries());
+        
+        set(ref(db, 'team/' + data.fullname), {
+              email: data.email, // Store the original email
+              name: data.fullname,
+              role: data.role,
+              phone: data.phone
+            }).then(() => {
+              alert(`Welcome ${data.fullname}, you have joined the team!`);
+              button.disabled = false;
+              button.innerHTML = "Join Team";
+              document.getElementById("emaila").value = "";
+              document.getElementById("role").value = "";
+              document.getElementById("name").value = "";
+              document.getElementById("phone").value = "";
+            }).catch((error) => {
+              console.error('Error writing to Firebase:', error);
+          });
+      } catch (error) {
+        console.error("Error joining the team:", error);
+        alert("Something went wrong. Please try again.");
+      } 
+    }
+
+  // Attach event listener to the team form
+  document.querySelector(".team form").addEventListener("submit", handleTeamSubmit);
+
+   </script>
+    
   </body>
 </html>

@@ -1,3 +1,5 @@
+
+
 /* Close when someone clicks on the "x" symbol inside the overlay */
 window.addEventListener("scroll", setScollVar)
 window.addEventListener("resize", setScollVar);
