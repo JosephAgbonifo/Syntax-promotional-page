@@ -48,3 +48,4 @@ function setScollVar(){
     document.getElementById("nav").classList.add("nav-bg");
   }
 }
+
