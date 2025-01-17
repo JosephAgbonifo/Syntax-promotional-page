@@ -281,7 +281,7 @@ nav p {
 /* ==============END OF SECTION 1 STYLES ============= */
 /* ============ THE MODAL STYLES STARTS ================== */
 .modal {
-  display: flex;
+  display: none;
   background-color: rgba(0, 0, 0, 0.5); /*Slightly dark background*/
   position: fixed;
   top: 0;
