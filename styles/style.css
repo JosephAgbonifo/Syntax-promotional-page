@@ -308,6 +308,41 @@ nav p {
 }
 /* ============ WAITLIST FORM STYLES END ============ */
 
+/* ============ THE MODAL STYLES STARTS ================== */
+.modal {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5); /*Slightly dark background*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: var(--white);
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow:0 5px 8px var(--black)
+}
+
+.close {
+  text-align: right;
+  font-size: 24px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: var(--black)
+}
+/* ============ THE MODAL STYLES ENDS ================== */
+
 /* ========== FOOTER STYLES STARTS ==============*/
 footer {
   background-color: var(--black);
