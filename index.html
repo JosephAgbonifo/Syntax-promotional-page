@@ -90,7 +90,7 @@
       <div>
         <h2>COMING SOON</h2>
         <a href="#what-to-expect-section">WHAT TO EXPECT</a>
-        <a href="#">JOIN THE WAITLIST</a>
+        <a href="#waitlist">JOIN THE WAITLIST</a>
       </div>
     </div>
 
@@ -198,13 +198,13 @@
       <h4>Join The Syntax Team</h4>
       <form action="" method="post">
         <label for="name"> Fullname </label>
-        <input type="test" name="fullname" id="name" /><br />
+        <input type="text" name="fullname" id="name" required="" /><br />
         <label for="role"> Role </label>
-        <input type="text" name="role" id="role" /><br />
+        <input type="text" name="role" id="role" required="" /><br />
         <label for="email"> Email </label>
-        <input type="email" name="email" id="email" /><br />
+        <input type="email" name="email" id="email"  required="" /><br />
         <label for="phone"> Phone Number </label>
-        <input type="text" name="role" id="role" /></br>
+        <input type="number" name="number" id="number"  required="" /></br>
         <div class="row">
           <div class="col">
 
@@ -214,6 +214,15 @@
           </div>
         </div>
         </form>
+
+       <!-- The MODAL-->
+           <div id="modal" class="modal">
+            <div class="modal-content">
+             <span class="close">&times;</span>
+              <h3>Form Submitted Successfully!</h3>
+              <p>Thank you for filling out the form</p>
+            </div>
+           </div>
     </div>
     <!-- FOOTER -->
     <footer id="contact">
