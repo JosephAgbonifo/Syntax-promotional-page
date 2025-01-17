@@ -46,3 +46,21 @@ function setScollVar(){
     document.getElementById("nav").classList.add("nav-bg");
   }
 }
+
+/* For the MODAL */
+
+// To get the modal and close button
+const modal = document.getElementById("modal");
+const closeBtn = document.querySelector(".close");
+
+// Close the modal when the 'x' is clicked
+closeBtn.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+// Close the modal when clicking outside of it
+window.addEventListener("click", function (e) {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
